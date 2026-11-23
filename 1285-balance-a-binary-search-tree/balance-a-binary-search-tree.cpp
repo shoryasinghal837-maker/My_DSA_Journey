@@ -19,12 +19,11 @@ public:
         root->right=solve(mid+1,r,vec);
         return root;
     }
-    vector<int>inorder(TreeNode* root,vector<int>&vec){
-        if(root==nullptr) return vec;
+    void inorder(TreeNode* root,vector<int>&vec){
+        if(root==nullptr) return;
         inorder(root->left,vec);
         vec.push_back(root->val);
         inorder(root->right,vec);
-        return vec;
     }
     TreeNode* balanceBST(TreeNode* root) {
         vector<int>vec;
