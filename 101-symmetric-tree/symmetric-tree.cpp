@@ -15,7 +15,7 @@ public:
         if(Left==NULL&&Right==NULL){
             return true;
         }
-        else if((Left==NULL&&Right!=NULL)||(Left!=NULL&&Right==NULL)){
+        else if(Left==NULL||Right==NULL){
             return false;
         }
         if((Left->val==Right->val)&&(check(Left->right,Right->left))&&(check(Left->left,Right->right))){
